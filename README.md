@@ -9,6 +9,7 @@
 * **spacers_vs_all_viral_sequences_combined_v2_Filtered_1Snp_100AF.lout** (sha1sum:af4263106836c6773ef7f82ace24a3a35a2d67c7) : LAST alignment between all spacers and viral contigs
 * **Table1_5_combined.txt**                                               (sha1sum:cb2e24ccd384209f8ce4260398ff660b29c22c41) : Metadata on viral contigs and viral OTUs
 * **viral_spacers.fna**                                                   (sha1sum:fbfe6476ebf2b0339a9993df84a54a81a8299843) : All CRISPR spacers by `TAXON_OID:SCAFFOLD_OID:???:???`
+* **predicted_hosts.tsv**                                                 (sha1sum:4918fd93dff34af8423e067c720f029529a4f6d1) : Host predictions for viral UViGs
 
 ### project notes
 
