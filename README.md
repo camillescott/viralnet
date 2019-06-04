@@ -19,6 +19,6 @@
 
 ### References
 
-Paez-Espino, D., Roux, S., Chen, I.M.A., Palaniappan, K., Ratner, A., Chu, K., Huntemann, M., Reddy, T.B.K., Pons, J.C., Llabrés, M. and Eloe-Fadrosh, E.A., 2018. *IMG/VR v. 2.0: an integrated data management and analysis system for cultivated and environmental viral genomes.* **Nucleic acids research**, 47(D1), pp.D678-D686.
+Paez-Espino, D., Roux, S., Chen, I.M.A., Palaniappan, K., Ratner, A., Chu, K., Huntemann, M., Reddy, T.B.K., Pons, J.C., Llabrés, M. and Eloe-Fadrosh, E.A., 2018. *IMG/VR v. 2.0: an integrated data management and analysis system for cultivated and environmental viral genomes.* **Nucleic acids research**, [DOI : 10.1093/nar/gky1127](https://doi.org/10.1093/nar/gky1127).
 
-Chen, I.M.A., Chu, K., Palaniappan, K., Pillay, M., Ratner, A., Huang, J., Huntemann, M., Varghese, N., White, J.R., Seshadri, R. and Smirnova, T., 2018. *IMG/M v. 5.0: an integrated data management and comparative analysis system for microbial genomes and microbiomes.* **Nucleic acids research**, 47(D1), pp.D666-D677.
+Chen, I.M.A., Chu, K., Palaniappan, K., Pillay, M., Ratner, A., Huang, J., Huntemann, M., Varghese, N., White, J.R., Seshadri, R. and Smirnova, T., 2018. *IMG/M v. 5.0: an integrated data management and comparative analysis system for microbial genomes and microbiomes.* **Nucleic acids research**, [DOI : 10.1093/nar/gky901](https://doi.org/10.1093/nar/gky901).
