@@ -120,6 +120,26 @@ var dataset = {
   ]
 };
 
+/* d3 wants the links to either use the *indices* of the nodes array, or be direct references
+ * to the node objects. So, let's transform them...
+ */
+dataset.nodeMap = {};
+dataset.nodes.forEach(function (node, index) {
+    dataset.nodeMap[node.id] = index;
+});
+dataset.linksTransformed = [];
+dataset.links.forEach(function (link, index) {    
+    dataset.linksTransformed.push({"s_start": link.s_start,
+                                   "s_end"  : link.s_end,
+                                   "source_name": link.source,
+                                   "target_name": link.target,
+                                   "source" : dataset.nodeMap[link.source],
+                                   "target" : dataset.nodeMap[link.target]});
+});
+// And now clobber the original links 'cause why not
+dataset.links = dataset.linksTransformed;
+
+
 var svg = d3.select("body").append("svg").attr({"width":w,"height":h});
 
 /*
@@ -135,17 +155,18 @@ var svg = d3.select("body")
 */
 
 var force = d3.layout.force()
-    .nodes(dataset.nodes)
-    .links(dataset.links)
     .size([w,h])
     .linkDistance([linkDistance])
     .charge([-500])
     .theta(0.1)
-    .gravity(0.05)
-    .start();
+    .gravity(0.05);
+
+force.nodes(dataset.nodes)
+     .links(dataset.links)
+     .start();
 
 var edges = svg.selectAll("line")
-    .data(dataset.edges)
+    .data(dataset.links)
     .enter()
     .append("line")
     .attr("id",function(d,i) {return 'edge'+i})
@@ -155,7 +176,7 @@ var edges = svg.selectAll("line")
     .style("pointer-events", "none");
 
 var edgepaths = svg.selectAll(".edgepath")
-    .data(dataset.edges)
+    .data(dataset.links)
     .enter()
     .append('path')
     .attr({'d': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
@@ -168,7 +189,7 @@ var edgepaths = svg.selectAll(".edgepath")
     .style("pointer-events", "none");
 
 var edgelabels = svg.selectAll(".edgelabel")
-    .data(dataset.edges)
+    .data(dataset.links)
     .enter()
     .append('text')
     .style("pointer-events", "none")
